@@ -10,11 +10,13 @@ import {loadCoffee} from './actions/coffeeActions';
 import {loadLocation} from './actions/locationActions';
 import './styles/styles.scss';
 require('./favicon.ico'); // Tell webpack to load favicon.ico
+import '../node_modules/toastr/build/toastr.min.css';
 
 const store = configureStore();
 store.dispatch(loadTaps());
 store.dispatch(loadCoffee());
 store.dispatch(loadLocation());
+//store.dispatch(monitorTaps());
 
 render(
   <Provider store={store}>

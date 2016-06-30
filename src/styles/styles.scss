@@ -1,18 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
 @import 'bootstrap';
 
-
-body {margin: 0; height: 100%; overflow: hidden
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Gochi Hand', sans-serif;
 }
 
 .hover-display {
-  .container-fluid {
+  .container, .container-fluid, .btn {
     visibility: hidden;
   }
   &:hover {
-    .container-fluid {
+    .container, .container-fluid, .btn {
       visibility: visible;
     }
   }
+}
+
+.tap-control-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 
 .tap-item {
@@ -36,10 +46,10 @@ body {margin: 0; height: 100%; overflow: hidden
 }
 
 .coffee-label {
-  text-align:center;
-  position:relative;
+  text-align: center;
+  position: relative;
   margin: auto;
-  width:100px;
+  width: 100px;
   .label-filler {
     z-index: -1;
     top: 0;

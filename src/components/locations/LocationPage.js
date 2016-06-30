@@ -10,16 +10,12 @@ class LocationPage extends React.Component {
     super(props, context);
   }
 
-  componentDidMount() {
-    this.props.actions.monitorTaps();
-  }
-
   render() {
     const {taps} = this.props;
     return (
       <div>
         {taps.map((tap, i) =>
-          <CoffeeTap key={i} tap={tap}/>
+          <CoffeeTap key={i} tap={tap} />
         )}
       </div>
     );

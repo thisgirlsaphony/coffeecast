@@ -6,7 +6,6 @@ import toastr from 'toastr';
 
 const loadTapsSuccess = (taps) => ({type: types.LOAD_TAP_SUCCESS, taps});
 const updateTapStatus = (tapStatus) => ({type: types.UPDATE_TAP_STATUS, tapStatus});
-//const tapMonitorClosed = (message) => ({type: types.TAP_MONITOR_CLOSED, message});
 
 export const loadTaps = () => (() => TapApi.getAllTaps().map(
   taps => loadTapsSuccess(taps),
@@ -14,9 +13,16 @@ export const loadTaps = () => (() => TapApi.getAllTaps().map(
 
 export const monitorTaps = () => (() => TapApi.tapMonitor().map(
   tapStatus => updateTapStatus(tapStatus),
-  err => handleError(err),
-  () => {
-    toastr.info('done');
+  err => handleError(err)).finally(() => {
+  toastr.info('done');
   }));
+
+export const openTap = (id) => (() => TapApi.openTap(id).map(
+  tapStatus => updateTapStatus(tapStatus),
+  err => handleError(err)));
+
+export const closeTap = (id) => (() => TapApi.closeTap(id).map(
+  tapStatus => updateTapStatus(tapStatus),
+  err => handleError(err)));
 
 export default loadTapsSuccess;

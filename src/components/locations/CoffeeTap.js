@@ -11,7 +11,7 @@ const CoffeeTap = ({tap}) => {
         <p>{tap.coffee.type}</p>
         <div className="label-filler"><img src={require('../../images/frame.png')}></img></div>
       </div>
-      <div className="tap-filler" style={{top: (100 - +tap.level) * 6 + 'px'}}><img src={require('../../images/backdrop.png')}></img></div>
+      <div className="tap-filler" style={{top: 90 - 90 * tap.level + 'vh'}}><img src={require('../../images/backdrop.png')}></img></div>
     </div>
   );
 };

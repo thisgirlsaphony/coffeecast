@@ -1,0 +1,66 @@
+body {margin: 0; height: 100%; overflow: hidden
+}
+
+.tap-item {
+  position: relative;
+  float: left;
+  width: 50%;
+
+  .tap-filler {
+    z-index: -2;
+    top: 0;
+    left: 0;
+    transition: top 2s ease;
+    width: 100%;
+    position: absolute;
+    background-color: #e7d8c6;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.coffee-label {
+  text-align:center;
+  position:relative;
+  margin: auto;
+  width:100px;
+  .label-filler {
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 300px;
+    margin-left: -100px;
+    position: absolute;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .face {
+    width: 100px;
+    padding-top: 50px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .mouth {
+      animation: facebounce 5s infinite;
+    }
+  }
+}
+
+@keyframes facebounce {
+  0% {
+    margin-left: 0;
+  }
+  33% {
+    margin-left: -10px;
+    transform: rotate(15deg);
+  }
+  66% {
+    margin-left: 10px;
+    transform: rotate(-15deg);
+  }
+}

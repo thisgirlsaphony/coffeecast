@@ -1,7 +1,7 @@
 # CoffeeCast
 
 ## Get Started
-1. **Clone the project** 'git cline https://github.com/thisgirlsaphony/coffeecast.git'
+1. **Clone the project** 'git clone https://github.com/thisgirlsaphony/coffeecast.git'
 2. **Install dependencies** 'npm run install'
 3. **Run the app** 'npm start -s'
 

@@ -1,4 +1,18 @@
+@import 'bootstrap';
+
+
 body {margin: 0; height: 100%; overflow: hidden
+}
+
+.hover-display {
+  .container-fluid {
+    visibility: hidden;
+  }
+  &:hover {
+    .container-fluid {
+      visibility: visible;
+    }
+  }
 }
 
 .tap-item {

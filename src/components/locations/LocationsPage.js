@@ -12,7 +12,7 @@ class LocationsPage extends React.Component {
     return (
       <ul className="list-group">
         {locations.map(location =>
-          <li key={location.id} className="list-item">
+          <li key={location.id} className="list-group-item">
             <Link to={'/location/' + location.id}>{location.name}</Link>
           </li>
         )}

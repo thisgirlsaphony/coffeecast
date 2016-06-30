@@ -1,15 +1,10 @@
-import React, { PropTypes } from 'react';
-import { Link, IndexLink } from 'react-router';
+import React, {PropTypes} from 'react';
+import Header from './layout/Header';
 
 const App = (props) => {
   return (
     <div>
-      <IndexLink to="/">Home</IndexLink>
-      {' | '}
-      <Link to="/fake">Fake Page</Link>
-      {' | '}
-      <Link to="/locations">Locations</Link>
-      <br/>
+      <Header />
       {props.children}
     </div>
   );

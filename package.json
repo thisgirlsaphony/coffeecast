@@ -25,7 +25,7 @@
   "author": "Emily Olson",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "3.3.6",
+    "bootstrap-sass": "3.3.6",
     "jquery": "3.0.0",
     "lodash": "4.13.1",
     "object-assign": "4.1.0",

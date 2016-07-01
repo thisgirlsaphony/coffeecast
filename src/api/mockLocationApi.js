@@ -6,19 +6,19 @@ import {Observable} from 'rxjs';
 // All calls return promises.
 const locations = [
   {
-    id: '1',
+    id: 1,
     name: 'Home',
     description: 'Where I sleep at night.',
-    taps: [1, 2]
+    taps: [1,2]
   },
   {
-    id: '2',
+    id: 2,
     name: 'WeWork',
     description: 'The office I generally work at.',
     taps: [3, 4]
   },
   {
-    id: '3',
+    id: 3,  
     name: 'Rightpoint',
     description: 'The office I sometimes work at',
     taps: [5, 6]

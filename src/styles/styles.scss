@@ -26,6 +26,7 @@ body {
 }
 
 .tap-item {
+  padding-top:25vh;
   position: relative;
   float: left;
   width: 50%;
@@ -37,7 +38,7 @@ body {
     transition: top 2s ease;
     width: 100%;
     position: absolute;
-    background-color: #e7d8c6;
+    background-color: #e8b888;
     img {
       width: 100%;
       height: auto;
@@ -49,13 +50,13 @@ body {
   text-align: center;
   position: relative;
   margin: auto;
-  width: 100px;
+  width: 200px;
   .label-filler {
     z-index: -1;
     top: 0;
     left: 0;
     width: 300px;
-    margin-left: -100px;
+    margin-left: -50px;
     position: absolute;
     img {
       width: 100%;
@@ -64,7 +65,9 @@ body {
   }
   .face {
     width: 100px;
+    margin-left:50px;
     padding-top: 50px;
+    padding-bottom: 20px;
     img {
       width: 100%;
       height: auto;
@@ -86,5 +89,39 @@ body {
   66% {
     margin-left: 10px;
     transform: rotate(-15deg);
+  }
+}
+
+.banner-flag-bar {
+  top: 0;
+  height: 100px;
+  width: 100%;
+
+  .banner-flag {
+    position:relative;
+    z-index: 5;
+    display:block;
+    margin: -22px auto;
+    width: 150px;
+  }
+}
+
+.location-tracker {
+  border: 4px solid black;
+  border-radius: 10px;
+  a {
+    color: #e8b888;
+  }
+  .panel-heading {
+    background-color: black;
+    color:white;
+    .location-tracker-row {
+      color:white;
+      font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+      font-size: 1.5em;
+    }
+  }
+  .panel-body {
+    font-size: 1.25em;
   }
 }

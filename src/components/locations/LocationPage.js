@@ -14,8 +14,8 @@ class LocationPage extends React.Component {
     const {taps} = this.props;
     return (
       <div>
-        {taps.map((tap, i) =>
-          <CoffeeTap key={i} tap={tap} />
+        {taps.map((tap) =>
+          <CoffeeTap key={tap.id} tap={tap} />
         )}
       </div>
     );
@@ -31,7 +31,7 @@ LocationPage.propTypes = {
 const mapStateToProps = (state, ownProps) => {
   const locationId = ownProps.params.id;
   let location = {
-    id: '', name: '', description: '', taps: []
+    id: 0, name: '', description: '', taps: []
   };
 
   if (locationId && state.locations.length > 0) {

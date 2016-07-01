@@ -22,7 +22,9 @@ class TapControlPanel extends React.Component {
     return (
       <div className="tap-control-panel hover-display">
           {taps.map((tap) =>
-            <button key={tap.id} onClick={() => this.toggleTap(tap)} className={tap.pouring ? 'btn btn-success' : 'btn btn-default'}  >{tap.id}</button>
+            <button key={tap.id} onClick={() => this.toggleTap(tap)} className={tap.pouring ? 'btn btn-success' : 'btn btn-default'}  >
+              {tap.id} : {(tap.level * 100).toFixed(1)}%
+            </button>
           )}
       </div>
     );

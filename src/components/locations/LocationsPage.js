@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
-import {Link} from 'react-router';
 import {connect} from 'react-redux';
+import LocationListItem from './LocationListItem';
+import {getLocationTapDetail} from '../../selectors/selectors';
 
 class LocationsPage extends React.Component {
   constructor(props, context) {
@@ -8,26 +9,25 @@ class LocationsPage extends React.Component {
   }
 
   render() {
-    const {locations} = this.props.state;
+    const {locations} = this.props;
     return (
-      <ul className="list-group">
-        {locations.map(location =>
-          <li key={location.id} className="list-group-item">
-            <Link to={'/location/' + location.id}>{location.name}</Link>
-          </li>
-        )}
-      </ul>
+      <div className="container">
+          {locations.map(location =>
+            <LocationListItem key={location.id} location={location}/>
+          )}
+      </div>
     );
   }
 }
 
 LocationsPage.propTypes = {
-  state: PropTypes.object.isRequired
+  locations: PropTypes.array.isRequired
 };
 
 const mapStateToProps = (state) => {
+  let mappedLocations = state.locations.map(location => Object.assign({}, location, {taps: getLocationTapDetail(location, state.taps, state.coffees)}));
   return {
-    state: state
+    locations: mappedLocations
   };
 };
 

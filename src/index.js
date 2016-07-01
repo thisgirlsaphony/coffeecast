@@ -23,3 +23,32 @@ render(
     <Router history={browserHistory} routes={routes} />
   </Provider>, document.getElementById('app')
 );
+
+
+
+ /*
+import React from 'react';
+import {render} from 'react-dom';
+import BasicPage from './components/Sample/BasicPage';
+import SpinnerComponent from './components/Sample/SpinnerComponent';
+import InputComponent from './components/Sample/InputComponent';
+
+import './styles/styles.scss';
+require('./favicon.ico');
+
+const greeting = {text: 'Hello!'};
+
+
+render(
+  <BasicPage item={greeting} />, document.getElementById('app')
+);
+
+
+render(
+  <SpinnerComponent />, document.getElementById('dumb')
+);
+
+render(
+  <InputComponent />, document.getElementById('sampleInput')
+);
+*/

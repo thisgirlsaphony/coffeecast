@@ -13,8 +13,18 @@ export const getLocationTapDetail = (location, taps, coffees) => {
   });
 };
 
+export const getTapDetail = (taps, coffees) => {
+  return _.map(taps, tap => {
+    return {
+      id: tap.id,
+      level: tap.level,
+      coffee: _.head(_.filter(coffees, coffee => coffee.id == tap.coffeeId))
+    }
+  })
+};
+
 export const getLocationById = (locations, locationId) => {
-  return _.head(_.filter(locations, location => location.id === locationId));
+  return _.head(_.filter(locations, location => location.id.toString() === locationId));
 };
 
 export const facePicker = (level) => {

@@ -12,17 +12,14 @@ export const loadTaps = () => (() => TapApi.getAllTaps().map(
   err => handleError(err)));
 
 export const monitorTaps = () => (() => TapApi.tapMonitor().map(
-  tapStatus => updateTapStatus(tapStatus),
-  err => handleError(err)).finally(() => {
-  toastr.info('done');
-  }));
+  tapStatus => updateTapStatus(tapStatus)));
 
 export const openTap = (id) => (() => TapApi.openTap(id).map(
-  tapStatus => updateTapStatus(tapStatus),
-  err => handleError(err)));
+  tapStatus => updateTapStatus(tapStatus)).finally(() => {
+  toastr.info('The tap is closed!');
+}));
 
 export const closeTap = (id) => (() => TapApi.closeTap(id).map(
-  tapStatus => updateTapStatus(tapStatus),
-  err => handleError(err)));
+  tapStatus => updateTapStatus(tapStatus)));
 
 export default loadTapsSuccess;
